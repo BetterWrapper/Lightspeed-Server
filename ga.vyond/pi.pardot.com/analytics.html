@@ -1,0 +1,28 @@
+
+function piResponse() {
+		piSetCookie('visitor_id714453', '77076815', 3650);
+			piSetCookie('visitor_id714453-hash', '83d2dc5a9f0ad188e6a183e379c693cf1b4e995595f3e1da7cafb22bdf7163cad7de306710f80cc1ecaaced350c71d59eb823a06', 3650);
+		
+		if (document.location.protocol != "https:" || (document.location.protocol == "https:" && true)) {
+		var analytics_link = document.location.protocol + "//" + "think.vyond.com/analytics?";
+		pi.tracker.visitor_id='77076815';
+
+				pi.tracker.visitor_id_sign='83d2dc5a9f0ad188e6a183e379c693cf1b4e995595f3e1da7cafb22bdf7163cad7de306710f80cc1ecaaced350c71d59eb823a06';
+		
+		var variables = 'conly=true';
+		for (property in pi.tracker) {
+					variables += "&" + property + "=" + encodeURIComponent(pi.tracker[property]);
+				}
+		var headID = document.getElementsByTagName("head")[0];
+		piScriptObj[piScriptNum] = document.createElement('script');
+		piScriptObj[piScriptNum].type = 'text/javascript';
+		piScriptObj[piScriptNum].src = analytics_link + variables;
+		headID.appendChild(piScriptObj[piScriptNum]);
+		piScriptObj[piScriptNum].onload = function() { return; }
+	}
+	}
+piResponse();
+
+
+
+
